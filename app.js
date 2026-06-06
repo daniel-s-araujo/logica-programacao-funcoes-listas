@@ -1,5 +1,5 @@
 function verificarChute() {
-    console.log('o botão foi clicado');
+    console.log(numeroSecreto);
 }
 
 function exibirTextoNaTela(tag, texto) {
@@ -7,5 +7,11 @@ function exibirTextoNaTela(tag, texto) {
     campo.innerHTML = texto;
 }
 
+function gerarNumeroAleatorio() {
+    return parseInt(Math.random() * 10 + 1);
+}
+
+let numeroSecreto = gerarNumeroAleatorio();
+
 exibirTextoNaTela('h1', 'Jogo do número secreto');
-exibirTextoNaTela('p', 'Escolha um número entre 1 e 100');
+exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
