@@ -1,3 +1,7 @@
+function verificarChute() {
+    console.log('o botão foi clicado');
+}
+
 let titulo = document.querySelector('h1');
 titulo.innerHTML = 'Jogo do número secreto';
 
