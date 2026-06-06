@@ -1,5 +1,6 @@
 function verificarChute() {
-    console.log(numeroSecreto);
+    let chute = document.querySelector('input').value;
+    console.log(chute == numeroSecreto);
 }
 
 function exibirTextoNaTela(tag, texto) {
