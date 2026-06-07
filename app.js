@@ -3,13 +3,17 @@ function verificarChute() {
 
     if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Acertou');
-        exibirTextoNaTela('p', 'Você descobriu o número secreto');
+        let palavraTentativas = tentativas > 1 ? 'tentativas' : 'tentativa';
+        let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativas}`;
+        exibirTextoNaTela('p', mensagemTentativas);
     } else {
         if (chute > numeroSecreto) {
             exibirTextoNaTela('p', 'O número secreto é menor');
         } else {
             exibirTextoNaTela('p', 'O número secreto é maior');
         }
+
+        tentativas++;
     }
 }
 
@@ -23,6 +27,7 @@ function gerarNumeroAleatorio() {
 }
 
 let numeroSecreto = gerarNumeroAleatorio();
+let tentativas = 1;
 
 exibirTextoNaTela('h1', 'Jogo do número secreto');
 exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
